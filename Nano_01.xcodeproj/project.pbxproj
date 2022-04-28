@@ -15,6 +15,7 @@
 		1590D34B2816C59800FD58C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590D34A2816C59800FD58C0 /* Assets.xcassets */; };
 		1590D34E2816C59800FD58C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590D34C2816C59800FD58C0 /* LaunchScreen.storyboard */; };
 		15B67A2F281AFE09005EC1F6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B67A2E281AFE09005EC1F6 /* CustomTableViewCell.swift */; };
+		15B67A31281B1DAC005EC1F6 /* DetailPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B67A30281B1DAC005EC1F6 /* DetailPartsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1590D34D2816C59800FD58C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1590D34F2816C59800FD58C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B67A2E281AFE09005EC1F6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		15B67A30281B1DAC005EC1F6 /* DetailPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPartsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1590D34F2816C59800FD58C0 /* Info.plist */,
 				1590D3472816C59700FD58C0 /* Nano_01.xcdatamodeld */,
 				15B67A2E281AFE09005EC1F6 /* CustomTableViewCell.swift */,
+				15B67A30281B1DAC005EC1F6 /* DetailPartsViewController.swift */,
 			);
 			path = Nano_01;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B67A31281B1DAC005EC1F6 /* DetailPartsViewController.swift in Sources */,
 				1590D3492816C59700FD58C0 /* Nano_01.xcdatamodeld in Sources */,
 				15B67A2F281AFE09005EC1F6 /* CustomTableViewCell.swift in Sources */,
 				1590D3432816C59700FD58C0 /* ViewController.swift in Sources */,
