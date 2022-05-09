@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1522102E281B990100569D02 /* NewPartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1522102D281B990100569D02 /* NewPartsViewController.swift */; };
+		15221038281D6AF700569D02 /* Nano_01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15221036281D6AF700569D02 /* Nano_01.xcdatamodeld */; };
+		152210672828307A00569D02 /* Component+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152210652828307A00569D02 /* Component+CoreDataClass.swift */; };
+		1522106C2828A36B00569D02 /* Component+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1522106A2828A36B00569D02 /* Component+CoreDataProperties.swift */; };
 		1590D33F2816C59700FD58C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590D33E2816C59700FD58C0 /* AppDelegate.swift */; };
 		1590D3412816C59700FD58C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590D3402816C59700FD58C0 /* SceneDelegate.swift */; };
 		1590D3432816C59700FD58C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590D3422816C59700FD58C0 /* ViewController.swift */; };
 		1590D3462816C59700FD58C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590D3442816C59700FD58C0 /* Main.storyboard */; };
-		1590D3492816C59700FD58C0 /* Nano_01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1590D3472816C59700FD58C0 /* Nano_01.xcdatamodeld */; };
 		1590D34B2816C59800FD58C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590D34A2816C59800FD58C0 /* Assets.xcassets */; };
 		1590D34E2816C59800FD58C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590D34C2816C59800FD58C0 /* LaunchScreen.storyboard */; };
 		15B67A2F281AFE09005EC1F6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B67A2E281AFE09005EC1F6 /* CustomTableViewCell.swift */; };
@@ -19,12 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1522102D281B990100569D02 /* NewPartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPartsViewController.swift; sourceTree = "<group>"; };
+		15221037281D6AF700569D02 /* Nano_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano_01.xcdatamodel; sourceTree = "<group>"; };
+		152210652828307A00569D02 /* Component+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1522106A2828A36B00569D02 /* Component+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1590D33B2816C59700FD58C0 /* Nano_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590D33E2816C59700FD58C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1590D3402816C59700FD58C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1590D3422816C59700FD58C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1590D3452816C59700FD58C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1590D3482816C59700FD58C0 /* Nano_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano_01.xcdatamodel; sourceTree = "<group>"; };
 		1590D34A2816C59800FD58C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1590D34D2816C59800FD58C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1590D34F2816C59800FD58C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1522106028281F0E00569D02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1522106A2828A36B00569D02 /* Component+CoreDataProperties.swift */,
+				152210652828307A00569D02 /* Component+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1590D3322816C59700FD58C0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +77,7 @@
 		1590D33D2816C59700FD58C0 /* Nano_01 */ = {
 			isa = PBXGroup;
 			children = (
+				1522106028281F0E00569D02 /* Model */,
 				1590D33E2816C59700FD58C0 /* AppDelegate.swift */,
 				1590D3402816C59700FD58C0 /* SceneDelegate.swift */,
 				1590D3422816C59700FD58C0 /* ViewController.swift */,
@@ -69,9 +85,10 @@
 				1590D34A2816C59800FD58C0 /* Assets.xcassets */,
 				1590D34C2816C59800FD58C0 /* LaunchScreen.storyboard */,
 				1590D34F2816C59800FD58C0 /* Info.plist */,
-				1590D3472816C59700FD58C0 /* Nano_01.xcdatamodeld */,
 				15B67A2E281AFE09005EC1F6 /* CustomTableViewCell.swift */,
 				15B67A30281B1DAC005EC1F6 /* DetailPartsViewController.swift */,
+				1522102D281B990100569D02 /* NewPartsViewController.swift */,
+				15221036281D6AF700569D02 /* Nano_01.xcdatamodeld */,
 			);
 			path = Nano_01;
 			sourceTree = "<group>";
@@ -148,11 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				15B67A31281B1DAC005EC1F6 /* DetailPartsViewController.swift in Sources */,
-				1590D3492816C59700FD58C0 /* Nano_01.xcdatamodeld in Sources */,
+				1522102E281B990100569D02 /* NewPartsViewController.swift in Sources */,
+				1522106C2828A36B00569D02 /* Component+CoreDataProperties.swift in Sources */,
+				15221038281D6AF700569D02 /* Nano_01.xcdatamodeld in Sources */,
 				15B67A2F281AFE09005EC1F6 /* CustomTableViewCell.swift in Sources */,
 				1590D3432816C59700FD58C0 /* ViewController.swift in Sources */,
 				1590D33F2816C59700FD58C0 /* AppDelegate.swift in Sources */,
 				1590D3412816C59700FD58C0 /* SceneDelegate.swift in Sources */,
+				152210672828307A00569D02 /* Component+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +392,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1590D3472816C59700FD58C0 /* Nano_01.xcdatamodeld */ = {
+		15221036281D6AF700569D02 /* Nano_01.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1590D3482816C59700FD58C0 /* Nano_01.xcdatamodel */,
+				15221037281D6AF700569D02 /* Nano_01.xcdatamodel */,
 			);
-			currentVersion = 1590D3482816C59700FD58C0 /* Nano_01.xcdatamodel */;
+			currentVersion = 15221037281D6AF700569D02 /* Nano_01.xcdatamodel */;
 			path = Nano_01.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

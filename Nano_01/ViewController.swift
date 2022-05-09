@@ -11,14 +11,16 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var table: UITableView!
   
-  
+//  let contex = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//
+//  var parts:[Component]?
   
   struct Component {
     let title : String
     let imageName : String
     let stockValue : Int
   }
-  
+
   let data: [Component] = [
     Component(title: "MicroController", imageName: "arduino", stockValue: 5),
     Component(title: "Capacitor", imageName: "capacitor", stockValue: 2),
@@ -39,8 +41,24 @@ class ViewController: UIViewController {
     table.dataSource = self
     table.delegate = self
     table.separatorStyle = UITableViewCell.SeparatorStyle.none
+//    fetchItem()
   }
 
+//  func fetchItem() {
+//    do{
+//      self.parts = try contex.fetch(Component.fetchRequest())
+//
+//      DispatchQueue.main.async {
+//        self.table.reloadData()
+//      }
+//
+//    }
+//    catch{
+//
+//    }
+//  }
+  
+  
   @IBAction func newParts(_ sender: Any) {
     
   }
@@ -49,25 +67,43 @@ class ViewController: UIViewController {
 
 
 extension ViewController : UITableViewDataSource,UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let indexnya = indexPath.row
+    print(indexnya)
     tableView.cellForRow(at: indexPath)?.isSelected = false
     performSegue(withIdentifier: "detailPartsSegue", sender: self)
   }
+  
+//  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    return self.parts?.count ?? 0
+//  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return data.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let component = data[indexPath.row]
+    let part = data[indexPath.row]
     let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-    cell.label?.text = " \(component.title) : \(component.stockValue)"
-    cell.iconImageView?.image = UIImage(named: component.imageName)
+    cell.label?.text = " \(part.title) : \(part.stockValue) PCS"
+    cell.iconImageView?.image = UIImage(named: "\(part.imageName)")
     cell.iconImageView.layer.cornerRadius = 20
     cell.label.layer.masksToBounds = true
     cell.label.layer.cornerRadius = 5
-//    let padding = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: cell.label.frame.height))
     return cell
   }
+  
+//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let part = self.parts![indexPath.row]
+//    let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+//    cell.label?.text = " \(String(describing: part.type)) : \(part.quantity) PCS"
+//    cell.iconImageView?.image = UIImage(named: "\(String(describing: part.type))")
+//    cell.iconImageView.layer.cornerRadius = 20
+//    cell.label.layer.masksToBounds = true
+//    cell.label.layer.cornerRadius = 5
+//    return cell
+//  }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 200

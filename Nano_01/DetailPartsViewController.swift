@@ -8,22 +8,33 @@
 import UIKit
 
 class DetailPartsViewController: UIViewController {
+  
+  var sparpart = ["0805 - 200", "2024 = 100K", "0604 - 330"]
+  
+  @IBOutlet weak var partList: UITableView!
 
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        partList.dataSource = self
+        partList.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension DetailPartsViewController: UITableViewDelegate, UITableViewDataSource{
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    sparpart.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = partList.dequeueReusableCell(withIdentifier: "partCell", for: indexPath)
+    cell.textLabel?.text = sparpart[indexPath.row]
+    cell.detailTextLabel?.text = "2"
+    return cell
+  }
+  
+  
 }
